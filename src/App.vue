@@ -1,7 +1,7 @@
 <template>
     <div class="container">
-        <div class="row">
-            <div class="col-xs-12 col-sm-8 col-md-6">
+        <div class="row justify-content-center">
+            <div class="col-xs-12 col-sm-8">
                 <h1>Vuex</h1>
                 <app-result :counter="counter"></app-result>
                 <hr>
@@ -28,3 +28,8 @@
     }
 </script>
 
+<style scoped>
+.container {
+    margin-top: 80px;
+}
+</style>
