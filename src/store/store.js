@@ -5,6 +5,10 @@ Vue.use(Vuex)
 
 export const store = new Vuex.Store({
     state: {
-        counter: 0
+        counter: 0,
+        clicks: 0
+    },
+    getters: {
+        stringCounter: state => `${state.clicks} Clicks`
     }
 })
