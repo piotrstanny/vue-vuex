@@ -3,9 +3,9 @@
         <div class="row justify-content-center">
             <div class="col-xs-12 col-sm-8">
                 <h1>Vuex</h1>
-                <app-result :counter="counter"></app-result>
+                <app-result></app-result>
                 <hr>
-                <app-counter @updated="counter += $event"></app-counter>
+                <app-counter></app-counter>
             </div>
         </div>
     </div>
@@ -16,11 +16,6 @@
     import Result from './components/Result.vue';
 
     export default {
-        data() {
-            return {
-                counter: 0
-            }
-        },
         components: {
             appCounter: Counter,
             appResult: Result,
