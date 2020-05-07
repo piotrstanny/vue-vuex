@@ -9,6 +9,11 @@ export const store = new Vuex.Store({
         clicks: 0
     },
     getters: {
-        stringCounter: state => `${state.clicks} Clicks`
+        stringCounter: state => `${state.clicks} clicks`
+    },
+    mutations: {
+        incrementCounter: state => state.counter++,
+        decrementCounter: state => state.counter--,
+        incrementClicks: state => state.clicks++
     }
 })
