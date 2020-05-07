@@ -1,21 +1,20 @@
 <template>
     <div>
-        <button type="button" class="btn btn-primary" @click="increment">Increment</button>
-        <button type="button" class="btn btn-primary" @click="decrement">Decrement</button>
+        <button type="button" class="btn btn-primary" @click="incrementCounter(); incrementClicks()">Increment</button>
+        <button type="button" class="btn btn-primary" @click="decrementCounter(); incrementClicks()">Decrement</button>
     </div>
 </template>
 
 <script>
+    import { mapMutations } from 'vuex';
+
     export default {
         methods: {
-            increment() {
-                this.$store.commit('incrementCounter');
-                this.$store.commit('incrementClicks');
-            },
-            decrement() {
-                this.$store.commit('decrementCounter');
-                this.$store.commit('incrementClicks');
-            }
+            ...mapMutations([
+                'incrementCounter',
+                'decrementCounter',
+                'incrementClicks'
+            ])
         }
     }
 </script>
