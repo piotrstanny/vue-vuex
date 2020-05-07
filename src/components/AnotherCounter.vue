@@ -1,17 +1,17 @@
 <template>
     <div>
-        <h3>Using mapMutations:</h3>
+        <h3>Using Actions:</h3>
         <button type="button" class="btn btn-primary" @click="incrementCounter(); incrementClicks()">Increment</button>
         <button type="button" class="btn btn-primary" @click="decrementCounter(); incrementClicks()">Decrement</button>
     </div>
 </template>
 
 <script>
-    import { mapMutations } from 'vuex';
+    import { mapActions } from 'vuex';
 
     export default {
         methods: {
-            ...mapMutations([
+            ...mapActions([
                 'incrementCounter',
                 'decrementCounter',
                 'incrementClicks'
