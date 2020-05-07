@@ -1,8 +1,8 @@
 <template>
     <div>
         <h3>Using Actions:</h3>
-        <button type="button" class="btn btn-primary" @click="incrementCounter(); incrementClicks()">Increment</button>
-        <button type="button" class="btn btn-primary" @click="decrementCounter(); incrementClicks()">Decrement</button>
+        <button type="button" class="btn btn-primary" @click="asyncIncrementCounter(); incrementClicks()">Increment</button>
+        <button type="button" class="btn btn-primary" @click="asyncDecrementCounter(); incrementClicks()">Decrement</button>
     </div>
 </template>
 
@@ -12,8 +12,8 @@
     export default {
         methods: {
             ...mapActions([
-                'incrementCounter',
-                'decrementCounter',
+                'asyncIncrementCounter',
+                'asyncDecrementCounter',
                 'incrementClicks'
             ])
         }
