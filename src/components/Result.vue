@@ -9,7 +9,7 @@
     export default {
         computed: {
             counter() {
-                return this.$store.state.counter
+                return this.$store.state.counter.counter
             },
             clicks() {
                 return this.$store.getters.stringCounter
